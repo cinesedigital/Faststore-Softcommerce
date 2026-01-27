@@ -14,8 +14,8 @@ module.exports = {
 
   // Platform specific configs for API
   api: {
-    storeId: "newstore",
-    workspace: "master",
+    storeId: "softcommercepartnersi",
+    workspace: "develop",
     environment: "vtexcommercestable",
     hideUnavailableItems: true,
     incrementAddress: false,
@@ -45,11 +45,10 @@ module.exports = {
   },
 
   // Production URLs
-  storeUrl: "https://www.fast.store",
-  secureSubdomain: "https://www.fast.store/",
-  checkoutUrl: "https://www.fast.store/checkout",
-  loginUrl: "https://www.fast.store/api/io/login",
-  accountUrl: "https://www.fast.store/api/io/account",
+  storeUrl: "https://softcommercepartnersi.myvtex.com",
+  checkoutUrl: "https://softcommercepartnersi.myvtex.com/checkout",
+  loginUrl: "https://softcommercepartnersi.myvtex.com/api/io/login",
+  accountUrl: "https://softcommercepartnersi.myvtex.com/api/io/account",
 
   previewRedirects: {
     home: "/",
@@ -93,6 +92,6 @@ module.exports = {
   },
 
   vtexHeadlessCms: {
-    webhookUrls: ["https://newstore.myvtex.com/cms-releases/webhook-releases"],
+    webhookUrls: ["https://softcommercepartnersi.myvtex.com/cms-releases/webhook-releases"],
   },
 };

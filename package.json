@@ -1,7 +1,7 @@
 {
-  "name": "starter.store",
+  "name": "softcommerce-faststore",
   "version": "0.1.0",
-  "description": "FastStore Base Starter",
+  "description": "Softcommerce test faststore",
   "private": true,
   "scripts": {
     "dev": "faststore dev",
@@ -11,10 +11,12 @@
     "test": "faststore test"
   },
   "dependencies": {
-    "@faststore/cli": "3.96.4",
+    "@envelop/graphql-jit": "^11.0.0",
+    "@faststore/cli": "^3.96.1",
     "next": "^13.5.9",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "swiper": "^12.0.3"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.12.1",
@@ -23,7 +25,7 @@
     "cypress": "12.17.4",
     "cypress-axe": "^1.5.0",
     "cypress-wait-until": "^2.0.1",
-    "typescript": "^4.9.4"
+    "typescript": "5.3.2"
   },
   "volta": {
     "node": "18.19.0",

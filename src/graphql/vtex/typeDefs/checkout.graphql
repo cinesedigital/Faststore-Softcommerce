@@ -1,0 +1,14 @@
+extend type Query {
+  getCheckout: Checkout
+}
+
+type CheckoutItem {
+  id: String
+}
+
+type Checkout {
+  orderFormId: String
+  salesChannel: String
+  loggedIn: Boolean
+  items: [CheckoutItem]
+}

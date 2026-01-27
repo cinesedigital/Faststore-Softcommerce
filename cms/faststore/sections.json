@@ -1,0 +1,89 @@
+[
+  {
+    "name": "FirstSection",
+    "schema": {
+      "title": "Primeira seção",
+      "description": "Esta é a primeira seção da página",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Primeiro titulo",
+          "type": "string",
+          "default": "Texto padrão"
+        },
+        "image": {
+          "title": "Imagem de fundo",
+          "type": "string",
+          "widget": {
+            "ui:widget": "image-uploader"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Symbols",
+    "schema": {
+      "title": "Icones do site",
+      "type": "object"
+    }
+  },
+  {
+    "name": "TopBar",
+    "schema": {
+      "title": "Top Bar",
+      "description": "Barra superior com mensagens rotativas",
+      "type": "object",
+      "properties": {
+        "items": {
+          "title": "Itens da Top Bar",
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "default": [
+            {
+              "text": "Frete grátis para todo o Brasil",
+              "url": "",
+              "blank": false
+            },
+            {
+              "text": "Parcele em até 10x sem juros",
+              "url": "",
+              "blank": false
+            },
+            {
+              "text": "Entrega rápida",
+              "url": "",
+              "blank": false
+            },
+            {
+              "text": "Troca facilitada",
+              "url": "",
+              "blank": false
+            }
+          ],
+          "items": {
+            "type": "object",
+            "title": "Item",
+            "required": ["text"],
+            "properties": {
+              "text": {
+                "type": "string",
+                "title": "Texto"
+              },
+              "url": {
+                "type": "string",
+                "title": "Link"
+              },
+              "blank": {
+                "type": "boolean",
+                "title": "Abrir em nova guia",
+                "default": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
