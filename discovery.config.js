@@ -1,9 +1,9 @@
 module.exports = {
   seo: {
-    title: "FastStore",
+    title: "Softcommerce",
     description: "A fast and performant store framework",
-    titleTemplate: "%s | FastStore",
-    author: "FastStore",
+    titleTemplate: "%s | Softcommerce",
+    author: "Softcommerce",
   },
 
   // Theming
@@ -15,7 +15,7 @@ module.exports = {
   // Platform specific configs for API
   api: {
     storeId: "softcommercepartnersi",
-    workspace: "develop",
+    workspace: "master",
     environment: "vtexcommercestable",
     hideUnavailableItems: true,
     incrementAddress: false,
