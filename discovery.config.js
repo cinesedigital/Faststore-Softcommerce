@@ -14,9 +14,9 @@ module.exports = {
 
   // Platform specific configs for API
   api: {
-    storeId: process.env.VTEX_STORE_ID,
-    workspace: process.env.VTEX_WORKSPACE,
-    environment: process.env.VTEX_ENVIRONMENT,
+    storeId: "softcommercepartnersi",
+    workspace: "develop",
+    environment: "vtexcommercestable",
     hideUnavailableItems: true,
     incrementAddress: false,
   },
