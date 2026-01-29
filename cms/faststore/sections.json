@@ -85,5 +85,19 @@
         }
       }
     }
+  },
+  {
+    "name": "SectionTest",
+    "schema": {
+      "title": "Seção teste preview",
+      "description": "Teste preview",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Texto",
+          "type": "string"
+        }
+      }
+    }
   }
 ]

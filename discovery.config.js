@@ -1,3 +1,9 @@
+console.log("---- ENV CHECK:", {
+  storeId: process.env.VTEX_ACCOUNT,
+  workspace: process.env.VTEX_WORKSPACE,
+  environment: process.env.VTEX_ENVIRONMENT,
+});
+
 module.exports = {
   seo: {
     title: "Softcommerce",
@@ -82,7 +88,7 @@ module.exports = {
 
   analytics: {
     // https://developers.google.com/tag-platform/tag-manager/web#standard_web_page_installation,
-    gtmContainerId: "GTM-1234567",
+    // gtmContainerId: "GTM-1234567",
   },
 
   experimental: {

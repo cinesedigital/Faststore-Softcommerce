@@ -1,3 +1,4 @@
+import { useDynamicContent } from "@faststore/core";
 import style from "../../../sass/top-bar.module.scss";
 import { Slider } from "../../ui/slider";
 
@@ -10,6 +11,10 @@ type Props = {
 };
 
 export function TopBar({ items }: Props) {
+  console.log('%c TopBar', 'font-size:1rem; margin: 20px 0 0 -8px; color: #EC8F33;');
+  const context = useDynamicContent<any>();
+  console.log('%c context: ', 'color: #7fffd4;', JSON.parse(JSON.stringify(context || '')));
+
   if (!items?.length) return null;
 
   const slides = items.slice(0, 8);
