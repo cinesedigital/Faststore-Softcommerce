@@ -1,4 +1,4 @@
-function serializeCookies(cookiesMap: Map<string, Record<string, string>>) {
+export function serializeCookies(cookiesMap: Map<string, Record<string, string>>) {
   const cookies: string[] = [];
 
   cookiesMap.forEach((domainCookies) => {
@@ -10,4 +10,25 @@ function serializeCookies(cookiesMap: Map<string, Record<string, string>>) {
   return cookies.join("; ");
 }
 
-export { serializeCookies };
+// requestIdleCallback Fallback
+const isClient = typeof window !== "undefined";
+export const requestIdle =
+  isClient && window.requestIdleCallback
+    ? window?.requestIdleCallback
+    : function (cb: (...args: any[]) => any) {
+        const deadline = {
+          didTimeout: false,
+          timeRemaining: () => 0,
+        };
+
+        return setTimeout(() => {
+          cb(deadline);
+        }, 1000);
+      };
+
+export const cancelIdle =
+  isClient && window.cancelIdleCallback
+    ? window?.cancelIdleCallback
+    : function (id: any) {
+        clearTimeout(id);
+      };

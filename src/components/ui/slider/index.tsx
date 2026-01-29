@@ -5,6 +5,7 @@ import Navigation from "./navigation";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { requestIdle } from "../../utils";
 
 type SliderProps = {
   children: ReactNode;
@@ -82,20 +83,22 @@ export function Slider({
 
   useEffect(() => {
     if (!enableThumbs) {
-      startSwiper({
-        slidesPerView,
-        spaceBetween,
-        enabled,
-        loop,
-        freeMode,
-        speed,
-        autoplay,
-        breakpoints,
-        direction,
-        zoom: zoom || {},
-        allowTouchMove,
-        effect: effect || undefined,
-        thumbs: thumbsSwiper ? { autoScrollOffset: 1, swiper: thumbsSwiper } : undefined,
+      requestIdle(() => {
+        startSwiper({
+          slidesPerView,
+          spaceBetween,
+          enabled,
+          loop,
+          freeMode,
+          speed,
+          autoplay,
+          breakpoints,
+          direction,
+          zoom: zoom || {},
+          allowTouchMove,
+          effect: effect || undefined,
+          thumbs: thumbsSwiper ? { autoScrollOffset: 1, swiper: thumbsSwiper } : undefined,
+        });
       });
     }
   }, [enableThumbs]);
