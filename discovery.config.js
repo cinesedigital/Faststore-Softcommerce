@@ -13,7 +13,7 @@ module.exports = {
   },
 
   // Theming
-  theme: "custom-theme",
+  theme: "theme",
 
   // Ecommerce Platform
   platform: "vtex",

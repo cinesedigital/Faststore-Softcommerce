@@ -1,0 +1,7 @@
+#banner_principal {
+  margin: 0;
+
+  :global(.containerSwiper) {
+    padding: unset;
+  }
+}

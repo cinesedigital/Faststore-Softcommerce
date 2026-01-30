@@ -1,5 +1,12 @@
 [
   {
+    "name": "Symbols",
+    "schema": {
+      "title": "Icones do site",
+      "type": "object"
+    }
+  },
+  {
     "name": "FirstSection",
     "schema": {
       "title": "Primeira seção",
@@ -22,13 +29,6 @@
     }
   },
   {
-    "name": "Symbols",
-    "schema": {
-      "title": "Icones do site",
-      "type": "object"
-    }
-  },
-  {
     "name": "TopBar",
     "schema": {
       "title": "Top Bar",
@@ -40,6 +40,26 @@
           "type": "array",
           "minItems": 1,
           "maxItems": 8,
+          "items": {
+            "type": "object",
+            "title": "Item",
+            "required": ["text"],
+            "properties": {
+              "text": {
+                "type": "string",
+                "title": "Texto"
+              },
+              "url": {
+                "type": "string",
+                "title": "Link"
+              },
+              "target": {
+                "type": "boolean",
+                "title": "Abrir em nova guia",
+                "default": false
+              }
+            }
+          },
           "default": [
             {
               "text": "Frete grátis para todo o Brasil",
@@ -61,41 +81,75 @@
               "url": "",
               "blank": false
             }
-          ],
-          "items": {
-            "type": "object",
-            "title": "Item",
-            "required": ["text"],
-            "properties": {
-              "text": {
-                "type": "string",
-                "title": "Texto"
-              },
-              "url": {
-                "type": "string",
-                "title": "Link"
-              },
-              "blank": {
-                "type": "boolean",
-                "title": "Abrir em nova guia",
-                "default": false
-              }
-            }
-          }
+          ]
         }
       }
     }
   },
   {
-    "name": "SectionTest",
+    "name": "BannerPrincipal",
     "schema": {
-      "title": "Seção teste preview",
-      "description": "Teste preview",
+      "title": "Banner Principal",
       "type": "object",
       "properties": {
-        "title": {
-          "title": "Texto",
-          "type": "string"
+        "items": {
+          "title": "Lista de banners",
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "title": "Banner",
+            "properties": {
+              "src": {
+                "title": "Imagens do banner",
+                "type": "object",
+                "properties": {
+                  "desktop": {
+                    "title": "Imagem Desktop",
+                    "type": "string",
+                    "widget": {
+                      "ui:widget": "image-uploader"
+                    }
+                  },
+                  "tablet": {
+                    "title": "Imagem Tablet",
+                    "type": "string",
+                    "widget": {
+                      "ui:widget": "image-uploader"
+                    }
+                  },
+                  "mobile": {
+                    "title": "Imagem Mobile",
+                    "type": "string",
+                    "widget": {
+                      "ui:widget": "image-uploader"
+                    }
+                  }
+                }
+              },
+              "alt": {
+                "title": "Texto alternativo",
+                "type": "string"
+              },
+              "link": {
+                "title": "Link",
+                "type": "string"
+              },
+              "target": {
+                "title": "Abrir em nova aba",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          }
+        },
+        "controls": {
+          "title": "Controles do slider",
+          "type": "string",
+          "default": "pagination",
+          "enum": ["pagination", "navigation", "none"],
+          "enumNames": ["Paginação", "Navegação (setas)", "Nenhum"]
         }
       }
     }
