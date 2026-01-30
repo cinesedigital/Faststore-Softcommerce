@@ -1,11 +1,11 @@
-import style from "../../../sass/top-bar.module.scss";
 import { Slider } from "../../ui/slider";
+import style from "./TopBar.module.scss";
 
 type Props = {
   items: {
     text: string;
     url?: string;
-    blank?: boolean;
+    target?: boolean;
   }[];
 };
 
@@ -35,7 +35,7 @@ export function TopBar({ items }: Props) {
         {slides.map((item, index) => (
           <div key={index} className={`swiper-slide ${style.top_itens}`}>
             {item.url && (
-              <a href={item.url} target={item.blank ? "_blank" : "_self"} rel={item.blank ? "noopener noreferrer" : undefined}>
+              <a href={item.url} target={item.target ? "_blank" : "_self"} rel={item.target ? "noopener noreferrer" : undefined}>
                 {item.text}
               </a>
             )}

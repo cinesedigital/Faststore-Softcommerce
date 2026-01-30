@@ -1,5 +1,12 @@
 [
   {
+    "name": "Symbols",
+    "schema": {
+      "title": "Icones do site",
+      "type": "object"
+    }
+  },
+  {
     "name": "FirstSection",
     "schema": {
       "title": "Primeira seção",
@@ -22,13 +29,6 @@
     }
   },
   {
-    "name": "Symbols",
-    "schema": {
-      "title": "Icones do site",
-      "type": "object"
-    }
-  },
-  {
     "name": "TopBar",
     "schema": {
       "title": "Top Bar",
@@ -40,6 +40,26 @@
           "type": "array",
           "minItems": 1,
           "maxItems": 8,
+          "items": {
+            "type": "object",
+            "title": "Item",
+            "required": ["text"],
+            "properties": {
+              "text": {
+                "type": "string",
+                "title": "Texto"
+              },
+              "url": {
+                "type": "string",
+                "title": "Link"
+              },
+              "target": {
+                "type": "boolean",
+                "title": "Abrir em nova guia",
+                "default": false
+              }
+            }
+          },
           "default": [
             {
               "text": "Frete grátis para todo o Brasil",
@@ -61,27 +81,75 @@
               "url": "",
               "blank": false
             }
-          ],
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "BannerPrincipal",
+    "schema": {
+      "title": "Banner Principal",
+      "type": "object",
+      "properties": {
+        "items": {
+          "title": "Lista de banners",
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
           "items": {
             "type": "object",
-            "title": "Item",
-            "required": ["text"],
+            "title": "Banner",
             "properties": {
-              "text": {
-                "type": "string",
-                "title": "Texto"
+              "src": {
+                "title": "Imagens do banner",
+                "type": "object",
+                "properties": {
+                  "desktop": {
+                    "title": "Imagem Desktop",
+                    "type": "string",
+                    "widget": {
+                      "ui:widget": "image-uploader"
+                    }
+                  },
+                  "tablet": {
+                    "title": "Imagem Tablet",
+                    "type": "string",
+                    "widget": {
+                      "ui:widget": "image-uploader"
+                    }
+                  },
+                  "mobile": {
+                    "title": "Imagem Mobile",
+                    "type": "string",
+                    "widget": {
+                      "ui:widget": "image-uploader"
+                    }
+                  }
+                }
               },
-              "url": {
-                "type": "string",
-                "title": "Link"
+              "alt": {
+                "title": "Texto alternativo",
+                "type": "string"
               },
-              "blank": {
+              "link": {
+                "title": "Link",
+                "type": "string"
+              },
+              "target": {
+                "title": "Abrir em nova aba",
                 "type": "boolean",
-                "title": "Abrir em nova guia",
                 "default": false
               }
             }
           }
+        },
+        "controls": {
+          "title": "Controles do slider",
+          "type": "string",
+          "default": "pagination",
+          "enum": ["pagination", "navigation", "none"],
+          "enumNames": ["Paginação", "Navegação (setas)", "Nenhum"]
         }
       }
     }

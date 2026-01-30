@@ -1,0 +1,120 @@
+:root {
+  // --------------------------------------------------------
+  // Colors (Branding Core)
+  // --------------------------------------------------------
+  --fs-color-main-0: #f1f2f3;
+  --fs-color-main-1: #dbdbdb;
+  --fs-color-main-2: #ff6908;
+  --fs-color-main-3: #eb5a14;
+  --fs-color-main-4: #c74d0c;
+
+  --fs-color-success-bkg: #e9fce3;
+  --fs-color-warning-bkg: #e9fce3;
+  --fs-color-danger-bkg: #f7d1d1;
+
+  --fs-color-neutral-0: #ffffff;
+  --fs-color-neutral-1: #f0f0f0ff;
+  --fs-color-neutral-2: #e6e6e6ff;
+  --fs-color-neutral-3: #cfcfcfff;
+  --fs-color-neutral-4: #9e9e9eff;
+  --fs-color-neutral-5: #888888ff;
+  --fs-color-neutral-6: #6b6b6bff;
+  --fs-color-neutral-7: #222222ff;
+
+  --fs-color-text-inverse: var(--fs-color-neutral-0);
+
+  /* Principal colors */
+  --primary_color: var(--fs-color-main-2);
+  --secondary_color: var(--fs-color-main-3);
+  --third_color: var(--fs-color-main-4);
+
+  /* Backgrund colors */
+  --bg_white: #fff;
+  --bg_primary: var(--fs-color-neutral-0);
+  --bg_secondary: var(--fs-color-neutral-1);
+  --bg_highlight: var(--fs-color-neutral-2);
+  --bg_third: var(--fs-color-neutral-3);
+  --bg_fourth: var(--fs-color-neutral-4);
+  --bg_dark: var(--fs-color-neutral-7);
+
+  /* Text color */
+  --text_base: #0f0f0f;
+  --text_primary: #474747;
+  --text_secondary: #676767;
+  --text_third: #a5a5a5;
+  --text_invert: var(--fs-color-text-inverse);
+  --text_sale: #df1313;
+
+  /* Cover screen and box shadow */
+  --cover_screen: #30303035;
+  --box_shadow: #30303050;
+  --box_shadow_light: #30303020;
+
+  // --------------------------------------------------------
+  // Typography (Branding Core)
+  // --------------------------------------------------------
+
+  // FACE
+  --fs-text-face-body: "Inter", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+
+  // WEIGHT
+  --fs-text-weight-light: 300;
+  --fs-text-weight-regular: 400;
+  --fs-text-weight-medium: 500;
+  --fs-text-weight-semibold: 600;
+  --fs-text-weight-bold: 600;
+  --fs-text-weight-black: 700;
+
+  --font_weight_black: 900;
+  --font_weight_extra_bold: 800;
+  --font_weight_bold: var(--fs-text-weight-black);
+  --font_weight_semi_bold: var(--fs-text-weight-semibold);
+  --font_weight_medium: var(--fs-text-weight-medium);
+  --font_weight_regular: var(--fs-text-weight-regular);
+  --font_weight_light: var(--fs-text-weight-light);
+  --font_weight_extra_light: 200;
+  --font_weight_thin: 100;
+
+  // HIERARCHY SCALE
+  --fs-text-size-0: 0.75rem;
+  --fs-text-size-1: 0.875rem;
+  --fs-text-size-2: 1rem;
+  --fs-text-size-3: 1.125rem;
+  --fs-text-size-4: 1.25rem;
+  --fs-text-size-5: 1.5rem;
+  --fs-text-size-6: 1.75rem;
+  --fs-text-size-7: 2rem;
+  --fs-text-size-8: 2.25rem;
+  --fs-text-size-9: 2.5rem;
+  --fs-text-size-title-huge: var(--fs-text-size-9);
+
+  --font_size_title: var(--fs-text-size-6); /* 28px */
+  --font_size_subtitle: var(--fs-text-size-5); /* 24px */
+  --font_size_heading: var(--fs-text-size-4); /* 20px */
+  --font_size_big: var(--fs-text-size-3); /* 18px */
+  --font_size_base: var(--fs-text-size-2); /* 16px */
+  --font_size_small: var(--fs-text-size-1); /* 14px */
+  --font_size_extra_small: var(--fs-text-size-0); /* 12px */
+  --font_size_tiny: 0.625rem; /* 10px */
+
+  /* Grid */
+  --section_max_width: 1920px;
+
+  /* Transition */
+  --transition_color: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, outline-color 0.3s ease,
+    box-shadow 0.3s ease;
+  --transition_fade: opacity 0.3s ease, visibility 0.3s ease;
+  --transition_move: transform 0.3s ease, height 0.3s ease, max-height 0.3s ease, margin 0.3s ease;
+  --transition_absolute: top 0.3s ease, left 0.3s ease, bottom 0.3s ease, right 0.3s ease;
+  --transition_fade_move: var(--transition_fade), var(--transition_move);
+  --transition_color_move: var(--transition_color), var(--transition_move);
+  --transition_color_fade: var(--transition_color), var(--transition_fade);
+
+  // --------------------------------------------------------
+  // Spacing (UI Essentials)
+  // --------------------------------------------------------
+
+  // --------------------------------------------------------
+  // Grid & Layout (UI Essentials)
+  // --------------------------------------------------------
+}

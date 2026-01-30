@@ -40,7 +40,7 @@ export function useSwiper({ onSwiperReady, onSlideChange }: UseSwiperProps = {})
       }
 
       options.modules = modules;
-
+      // if (![].length) { return } // -- Test slider off
       swiperInstance.current = new Swiper(sliderRef.current, options);
       setInitialized(true);
 
