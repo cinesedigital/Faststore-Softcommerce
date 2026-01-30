@@ -1,20 +1,15 @@
-import { useDynamicContent } from "@faststore/core";
-import style from "../../../sass/top-bar.module.scss";
 import { Slider } from "../../ui/slider";
+import style from "./TopBar.module.scss";
 
 type Props = {
   items: {
     text: string;
     url?: string;
-    blank?: boolean;
+    target?: boolean;
   }[];
 };
 
 export function TopBar({ items }: Props) {
-  console.log('%c TopBar', 'font-size:1rem; margin: 20px 0 0 -8px; color: #EC8F33;');
-  const context = useDynamicContent<any>();
-  console.log('%c context: ', 'color: #7fffd4;', JSON.parse(JSON.stringify(context || '')));
-
   if (!items?.length) return null;
 
   const slides = items.slice(0, 8);
@@ -40,7 +35,7 @@ export function TopBar({ items }: Props) {
         {slides.map((item, index) => (
           <div key={index} className={`swiper-slide ${style.top_itens}`}>
             {item.url && (
-              <a href={item.url} target={item.blank ? "_blank" : "_self"} rel={item.blank ? "noopener noreferrer" : undefined}>
+              <a href={item.url} target={item.target ? "_blank" : "_self"} rel={item.target ? "noopener noreferrer" : undefined}>
                 {item.text}
               </a>
             )}
