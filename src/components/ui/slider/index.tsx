@@ -35,7 +35,7 @@ export function Slider({
   enabled = true,
   loop = false,
   freeMode = false,
-  speed = 1000,
+  speed = 500,
   autoplay,
   breakpoints = {},
   pagination = false,
